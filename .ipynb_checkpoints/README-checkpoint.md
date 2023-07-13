@@ -15,3 +15,6 @@ In this part of the analysis, I used beautiful Soup to check all the rows in the
 - mars_temperature_df[['min_temp', 'pressure']] = mars_temperature_df[['min_temp', 'pressure']].astype(str).astype(float)  
 - mars_temperature_df['terrestrial_date'] = pd.to_datetime(mars_temperature_df['terrestrial_date'])
 - mars_temperature_df[['sol', 'ls' , 'month']] = mars_temperature_df[['sol', 'ls', 'month']].astype(str).astype(int)
+Next we used to groupby to group the temprature by minimum and calculated the average. `month_temperature =mars_temperature_df.groupby('month')['min_temp']`. Then plotted all the our filtered. Finally we tried to analyze the terrestrial date in the martian month. And tried to show the relation between the terrestrial_date and the minimum temperature.
+
+We can conclude that nn average, the third month has the coldest minimum temperature on Mars, and the eighth month is the warmest. But it is always very cold there in human terms!Atmospheric pressure is, on average, lowest in the sixth month and highest in the ninth.The distance from peak to peak is roughly 1425-750, or 675 days. A year on Mars appears to be about 675 days from the plot. Internet search confirms that a Mars year is equivalent to 687 earth days.
